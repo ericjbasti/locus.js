@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>laso</title>
+		<meta name = "viewport" content="width=device-width, user-scalable=0, maximum-scale=1"/>
+	</head>
+	<body>
+	</body>
+	<script src="laso.js"></script>
+	<script>
+		var stats = new Laso('just_for_me');
+
+		stats.loadFromLocal();
+
+		if(!stats.data.records) stats.data.records={};
+
+		stats.data.records.item1={name: Eric, age: 32};
+
+		stats.saveToLocal();
+
+	</script>
+</html>
