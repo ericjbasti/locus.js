@@ -1,13 +1,13 @@
-laso.js
+locus.js
 =======
 
 Simple Local Storage 
 
-This implimentation hasn't been browser tested in anthing other than a modern Chrome and Safari. It's really not doing anything complex, so browser support should be fine, but for now... who knows.
+This implimentation hasn't been browser tested in anything other than a modern Chrome and Safari. It's really not doing anything complex, so browser support should be fine, but for now... who knows.
 
 Basic usage:
 	
-	var ls = new Laso("my_ls");	// this created a new Laso with an id to check if we created any prior data it might find.
+	var ls = new Locus("my_ls");	// this created a new Locus with an id to check if we created any prior data it might find.
 
 	ls.loadFromLocal(); // this will pull in any local storage info, should it exist into an easy to manage object.
 

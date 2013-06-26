@@ -1,8 +1,8 @@
 // Local Storage wrangler... trying to make life easier.
-// you give the Laso an id, to make sure its our local storage.
+// you give the Locus an id, to make sure its our local storage.
 
 
-var Laso = function(id){
+var Locus = function(id){
 	this.data = {};
 	this.local = window.localStorage || {};
 
@@ -13,23 +13,23 @@ var Laso = function(id){
 	}
 }
 
-Laso.prototype.get = function(what) {
+Locus.prototype.get = function(what) {
 	this.data[what]||undefined
 	return this;
 };
 
-Laso.prototype.set = function(what,value) {
+Locus.prototype.set = function(what,value) {
 	this.data[what]=value
 	return this;
 };
 
-Laso.prototype.clear = function(){
+Locus.prototype.clear = function(){
 	this.data={};
 	this.local.clear();
 	return this;
 }
 
-Laso.prototype.loadFromLocal = function(){
+Locus.prototype.loadFromLocal = function(){
 	if(this.local){
 		for (var i in this.local){
 			if(this.local[i].split('{').length!=1){
@@ -45,7 +45,7 @@ Laso.prototype.loadFromLocal = function(){
 	}
 }
 
-Laso.prototype.saveToLocal = function(){
+Locus.prototype.saveToLocal = function(){
 	if(this.data){
 		for (var i in this.data){
 			if(typeof this.data[i] == 'object'){
